@@ -15,7 +15,7 @@ PRODUCTOS_FALSOS = [
 ]
 
 def simular_latencia():
-    time.sleep(random.uniform(0.1, 0.3)) # Un poco más rápido que el orquestador
+    time.sleep(random.uniform(0.1, 0.3)) # mass rapido que el orquestador
 
 @app.route('/api/producto/<producto_id>', methods=['GET'])
 def get_producto(producto_id):
@@ -30,5 +30,5 @@ def get_producto(producto_id):
     return flask.jsonify(producto_elegido), 200
 
 if __name__ == '__main__':
-    # Corremos en el puerto 5001
-    app.run(port=5001, debug=True)
+    # puerto 5001
+    app.run(host='0.0.0.0', port=5001, debug=True)
